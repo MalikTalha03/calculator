@@ -25,9 +25,10 @@ const styles = StyleSheet.create({
     flex: 2,
   },
   input: {
+    marginTop: 300,
     height: 80,
     backgroundColor: 'black',
-    fontSize: 18,
+    fontSize: 38,
     textAlign: 'right',
   },
 });
