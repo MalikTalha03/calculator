@@ -27,20 +27,23 @@ const Home = () => {
       setInput('');
       return;
     }
-    if(title === '+/-') {
+    if (title === '+/-') {
       setInput((input * -1).toString());
       return;
     }
-    if(title === '%') {
+    if (title === '%') {
       setInput((input / 100).toString());
       return;
     }
-    if(title === '=') {
+    if (title === '=') {
+      if (input === '' || operators.includes(input.slice(-1))) {
+        return;
+      }
       setInput(eval(input).toString());
       return;
     }
-    if(operators.includes(title)) {
-      if(input === '' || operators.includes(input.slice(-1))) {
+    if (operators.includes(title)) {
+      if (input === '' || operators.includes(input.slice(-1))) {
         return;
       }
     }
